@@ -26,7 +26,7 @@ export class ProjectComponent {
   projects: Project[] = [
     {
       viewProjlink: 'https://stockwise-inventory.netlify.app/',
-      githublink: 'https://github.com/shikha061987?tab=repositories',
+      githublink: 'https://github.com/shikha061987/stockwise-app',
       projectNme: 'Inventory Management System',
       projectImages: [
         './project/inventory-mobile1.jpeg',
@@ -58,7 +58,7 @@ export class ProjectComponent {
 
     {
       viewProjlink: 'https://angular-movies-app-25f82.web.app/home',
-      githublink: 'https://github.com/shikha061987?tab=repositories',
+      githublink: 'https://github.com/shikha061987/Angular-Movie-App',
       projectNme: 'Movie Explorer Project',
 
       projectImages: [
@@ -95,7 +95,7 @@ export class ProjectComponent {
 
     {
       viewProjlink: 'https://employees-manage-portal.netlify.app/',
-      githublink: 'https://github.com/shikha061987?tab=repositories',
+      githublink: 'https://github.com/shikha061987/Employee-Management',
       projectNme: 'Employees Management System',
       projectImages: [
         './project/emp-management.-Mobile1.jpeg',
