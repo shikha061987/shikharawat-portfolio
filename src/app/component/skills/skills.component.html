@@ -1,0 +1,82 @@
+<section id="skills" class="py-10 px-4 sm:px-6 md:px-16 lg:px-24 relative">
+
+  <!-- Header -->
+
+  <div class="text-center mb-16">
+    <div class="inline-block"> <!-- shrink-to-content wrapper -->
+
+      <h2 class="flex items-center justify-center gap-3 text-3xl font-extrabold 
+             bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+
+        <img src="skill-header.png" class="w-8 h-8 cursor-pointer animate-bounce-y" alt="info icon" />
+
+        <span class="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+          Skills
+        </span>
+      </h2>
+
+      <!-- line under header -->
+      <div class="h-1 mt-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
+    </div>
+  </div>
+
+  <!-- Skills Summary Card -->
+  <div class="aboutdarkBgdiv p-6 sm:p-8 bg-white rounded-3xl shadow-lg border border-gray-100">
+
+    <div class="flex flex-col gap-1">
+
+      <span class="text-lg sm:text-xl font-semibold 
+                         bg-gradient-to-r from-blue-500 to-purple-500 
+                         bg-clip-text text-transparent">
+        Skills & Technologies
+      </span>
+
+      <span class="Developerheader mt-1 sm:mt-0 
+                         text-sm sm:text-base font-semibold 
+                         text-gray-600 leading-relaxed">
+        Angular • TypeScript • RxJS • NgRx • Signals • HTML5 • CSS3 • Tailwind CSS • Bootstrap • Angular Material • REST
+        APIs • HTTP Client
+      </span>
+    </div>
+
+    <p class="mt-3 text-sm sm:text-base text-gray-600 leading-relaxed">
+      I specialize in building scalable, high-performance Angular applications using modern architecture,
+      clean UI design, and strong state management with RxJS. My focus is on writing maintainable code,
+      improving performance, and delivering user-centric solutions.
+    </p>
+  </div>
+
+  <!-- Skill Cards Grid -->
+
+  <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+
+    @for (card of skills.slice(0, showCount); track card.title) {
+    <app-skill-card [title]="card.title" [proficiency]="card.proficiency" [items]="card.items"
+      [description]="card.description">
+    </app-skill-card>
+    }
+  </div>
+
+  <!-- Show More / Show Less Buttons  -->
+  @if (skills.length > 3) {
+      <div class="flex justify-center mt-10 gap-2 sticky bottom-0  py-4 z-10">
+
+  <!-- <div class="flex justify-center mt-10 gap-2 sticky bottom-0 bg-white py-4 z-10"> -->
+
+    @if (!isAllShown) {
+    <button (click)="loadMore()"
+      class="px-5 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-md mr-3">
+      Show More
+    </button>
+    }
+
+    @if (canShowLess) {
+    <button (click)="showLess()"
+      class="px-5 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-md mr-3">
+      Show Less
+    </button>
+    }
+
+  </div>
+  }
+</section>

@@ -1,0 +1,53 @@
+<section id="about" class=" py-0 px-6 md:px-20 relative">
+
+    <!-- Header -->
+
+    <div class="text-center mb-16">
+        <div class="inline-block"> <!-- shrink-to-content wrapper -->
+
+            <h2 class="flex items-center justify-center gap-3 text-3xl font-extrabold 
+             bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+
+                <img src="aboutme-header.png" class="w-10 h-10 cursor-pointer animate-bounce-y" alt="info icon" />
+
+                <span class="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+                    About Me
+                </span>
+            </h2>
+
+            <!-- line under header -->
+            <div class="h-1 mt-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
+        </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-10 items-start">
+
+        <!-- PROFILE CARD -->
+       <div class="aboutdarkBgdiv p-8 bg-white dark:bg-black dark:text-white rounded-3xl shadow-lg border border-gray-100  hover:scale-105 hover:border-blue-100 transition-transform transition-colors duration-300">
+
+            <h3 class="flex items-center gap-2 text-2xl font-semibold mb-4">
+                <img src="profile-header.png" class="w-5 h-5" alt="info icon" />
+
+                <span class="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+                    Profile
+                </span>
+            </h3>
+
+
+
+            <p class=" text-sm text-gray-600 leading-relaxed">
+                I am an Front-End Angular Developer with 5 years of prior professional experience and 
+recent hands-on experience building modern Angular (v14+) applications.  Skilled in developing high-performance SPAs using Angular, TypeScript, RxJS, and modern UI frameworks. 
+Strong focus on clean architecture, performance optimization, and secure, responsive user interfaces.<br><br>
+                After taking a career break to focus on family, I returned with more clarity, discipline, and
+                dedication to technology. Over the past year, I have fully upskilled myself in Angular, and have built multiple real-world projects to strengthen
+                my portfolio.
+                I enjoy learning new technologies, solving challenges, volunteering at Lanier Technical College.
+
+            </p>
+        </div>
+
+        <!-- Education CARD Start -->
+        <app-education></app-education>
+    </div>
+</section>

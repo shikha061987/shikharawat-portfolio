@@ -1,0 +1,62 @@
+<!-- animated-background.component.html -->
+<div [ngClass]="{
+  'gradient-animation': animationType === 'gradient',
+  'particles-animation': animationType === 'particles',
+  'grid-animation': animationType === 'grid',
+  'waves-animation': animationType === 'waves'
+}" class="fixed inset-0 -z-10" [style.opacity]="opacity">
+  
+  <!-- Gradient Animation -->
+  @if (animationType === 'gradient') {
+    <div class="gradient-bg h-full w-full">
+      <div class="gradients-container">
+        <div class="g1"></div>
+        <div class="g2"></div>
+        <div class="g3"></div>
+        <div class="g4"></div>
+        <div class="g5"></div>
+      </div>
+    </div>
+  }
+  
+  <!-- Particles Animation -->
+  @if (animationType === 'particles') {
+    <div class="particles-container ">
+      @for (particle of particles; track particle.id) {
+        <div 
+          class="particle"
+          [style.width.px]="particle.size"
+          [style.height.px]="particle.size"
+          [style.left.%]="particle.left"
+          [style.animation-delay.s]="particle.animationDelay"
+          [style.animation-duration.s]="particle.animationDuration">
+        </div>
+      }
+    </div>
+  }
+  
+  <!-- Grid Animation -->
+  @if (animationType === 'grid') {
+    <div class="grid-bg"></div>
+  }
+  
+  <!-- Waves Animation -->
+  @if (animationType === 'waves') {
+    <div class="waves-container">
+      <div class="wave wave-1"></div>
+      <div class="wave wave-2"></div>
+      <div class="wave wave-3"></div>
+    </div>
+  }
+</div>
+
+<!-- SVG Filter for Gradient Animation -->
+<svg width="0" height="0" class="absolute">
+  <defs>
+    <filter id="goo">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+      <feBlend in="SourceGraphic" in2="goo" />
+    </filter>
+  </defs>
+</svg>

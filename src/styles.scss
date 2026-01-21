@@ -1,0 +1,251 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+@import "tailwindcss";
+
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+@import 'swiper/css/autoplay';
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html.dark {
+  background-color: #0C0A24;
+  // background: radial-gradient(circle at top, #2A1F3F 0%, #0D0D10 80%);
+
+}
+
+/* Only normal text */
+html.dark p,
+html.dark h1,
+html.dark ul,
+html.dark h3,
+html.dark h2,
+
+html.dark .viewProjdarkColor {
+  color: white;
+}
+
+html.dark .Developerheader {
+  color: white;
+}
+
+html.dark .contactAlert {
+  color: red;
+}
+
+html.dark .contactlabel {
+  color: white;
+}
+
+html.dark .formplaceholder::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+/* Hover effect */
+.contactlabel-hover:hover {
+  color: black;
+  font-weight: bold;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+html.dark nav {
+
+  background-color: rgb(40, 39, 39);
+ // background-image: linear-gradient(to right, #1f1e1e, #282727, #3a3939);
+
+}
+
+html.dark .menuOpendarkBg {
+
+  color: white;
+    //background-color: rgb(40, 39, 39);
+background-image: linear-gradient(to right, #1f1e1e, #282727, #3a3939);
+  //  background-image: linear-gradient(to right, #000000, #1f2937, #212326);
+  border: none;
+}
+
+html.dark .aboutdarkBgdiv {
+  color: white;
+  background-color: rgb(40, 39, 39);
+  border: none;
+}
+
+html.dark .insideDivdarkBg {
+  color: white;
+
+  background-color: rgb(40, 39, 39);
+
+}
+
+html.dark .insideDivEducationdarkBg {
+  color: white;
+  background-color: rgb(57, 55, 55);
+}
+
+html.dark .universitydarkBg {
+  color: white !important;
+  /* normal text in dark mode */
+}
+
+
+html.dark .navheader a {
+  color: white;
+}
+
+
+/* Light mode default */
+html {
+  background-color: white;
+  color: black;
+}
+
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+
+/* --- Portfolio text bounce UP and DOWN*/
+
+@keyframes bounceY {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-bounce-y {
+  animation: bounceY 1.5s ease-in-out infinite;
+}
+
+
+/*--------- Fade IN and  + Fade out in Skill Card--------- */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/*--------- 3D rotate + pop-out effect: in Skill Card--------- */
+.skill-card {
+  transform: perspective(800px) translateZ(0) rotateX(0deg) rotateY(0deg);
+}
+
+.skill-card:hover {
+  transform: perspective(800px) translateZ(40px) rotateX(5deg) rotateY(-5deg) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+
+/*------ Profile content ANIMATION----------*/
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@layer utilities {
+  .animate-fadeInUp {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .animate-scaleIn {
+    animation: scaleIn 0.6s ease-out forwards;
+  }
+}
+
+
+@layer utilities {
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fadeInUp {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+}
+ /*Start Education div hover on movile*/
+@layer utilities {
+  .education-card {
+    /* initial state */
+    transform: translate(0, 0) scale(1);
+    transition: transform 0.3s ease-out;
+  }
+
+  /* Desktop hover */
+  .education-card:hover {
+    transform: translate(-4px, -4px) scale(1.05);
+  }
+
+  /* Mobile touch (simulate hover on touch) */
+  .education-card:active {
+    transform: translate(-2px, -2px) scale(1.03);
+  }
+}
+  /*End Education div hover on movile*/
+
+
+.hover-effect {
+  transform: translate(-0.25rem, -0.25rem) scale(1.05);
+}
+
+.hover-effect span {
+  opacity: 0.4;
+  /* match the gradient overlay */
+}
+

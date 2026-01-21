@@ -1,0 +1,21 @@
+<app-animated-background animationType="particles" [particleColors]="[
+    'radial-gradient(circle, #8B5CF6, #EC4899)',
+    'radial-gradient(circle, #EC4899, #D946EF)',
+    'radial-gradient(circle, #D946EF, #8B5CF6)',
+    'radial-gradient(circle, #C084FC, #F0ABFC)',
+    'radial-gradient(circle, #F0ABFC, #C084FC)'
+  ]" [particleSize]="{ min: 2, max: 8 }" [speed]="1" [opacity]="0.3">
+</app-animated-background>
+
+
+
+<!-- Your component content -->
+
+<app-navbar></app-navbar>
+<app-home></app-home>
+<app-about></app-about>
+<app-experience></app-experience>
+<app-skills></app-skills>
+<app-project></app-project>
+<app-contact></app-contact>
+<router-outlet></router-outlet>

@@ -1,0 +1,93 @@
+<section id="education">
+
+    <div
+        class="aboutdarkBgdiv p-8 bg-blue dark:bg-gray-900 rounded-3xl shadow-lg border border-gray-100 dark:border-gray-700">
+
+        <div class="absolute -left-[22px] top-1 w-4 h-4 bg-purple-500 rounded-full border-4 border-white shadow"></div>
+
+        <h3 class="flex items-center gap-2 text-2xl font-semibold mb-4">
+
+            <img src="education-header.png" class="w-6 h-6" alt="info icon" />
+
+            <span class="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+                Education
+            </span>
+        </h3>
+
+        <!-- =========== Education Details============ -->
+
+        <!-- <div *ngFor="let education of educations" class="relative p-6 rounded-xl shadow-md mb-4 cursor-pointer
+            bg-gray-50 dark:bg-[rgb(57,55,55)]
+            border border-transparent
+            overflow-hidden
+            transform transition-transform duration-300 ease-out
+            education-card insideDivEducationdarkBg">
+
+            <span class="absolute inset-0 z-0 opacity-0 transition-opacity duration-300
+                    bg-gradient-to-r from-blue-100 to-purple-100
+                     dark:bg-gradient-to-r dark:from-blue-800 dark:to-purple-800
+                    group-hover:opacity-20
+                     dark:group-hover:opacity-20
+                     group-active:opacity-40
+                    dark:group-active:opacity-40
+                     rounded-xl">
+            </span>
+
+            <button class="my-0.5 h-7 px-3 text-xs flex items-center rounded-full text-white 
+                   bg-gradient-to-r from-blue-500 to-purple-500 shadow">
+                {{education.date}}
+            </button>
+
+            <h2 class="mt-2 font-lightBold text-[17px] text-gray-800 dark:text-white
+               contactlabel-hover transition-colors contactlabel">
+
+                {{education.degreeName}}
+            </h2>
+
+            <span class="mt-1 text-sm italic bg-gradient-to-r from-blue-500 to-purple-500
+                bg-clip-text text-transparent transition-colors">
+                {{education.university}}
+            </span>
+        </div> -->
+
+        @for (education of educations; track education.degreeName) {
+  <div
+    class="relative p-6 rounded-xl shadow-md mb-4 cursor-pointer
+           bg-gray-50 dark:bg-[rgb(57,55,55)]
+           border border-transparent
+           overflow-hidden
+           transform transition-transform duration-300 ease-out
+           education-card insideDivEducationdarkBg">
+
+    <span
+      class="absolute inset-0 z-0 opacity-0 transition-opacity duration-300
+             bg-gradient-to-r from-blue-100 to-purple-100
+             dark:from-blue-800 dark:to-purple-800
+             group-hover:opacity-20
+             group-active:opacity-40
+             rounded-xl">
+    </span>
+
+    <button
+      class="my-0.5 h-7 px-3 text-xs flex items-center rounded-full text-white
+             bg-gradient-to-r from-blue-500 to-purple-500 shadow">
+      {{ education.date }}
+    </button>
+
+    <h2
+      class="mt-2 font-lightBold text-[17px] text-gray-800 dark:text-white
+             transition-colors">
+      {{ education.degreeName }}
+    </h2>
+
+    <span
+      class="mt-1 text-sm italic bg-gradient-to-r from-blue-500 to-purple-500
+             bg-clip-text text-transparent">
+      {{ education.university }}
+    </span>
+
+  </div>
+}
+
+    </div>
+</section>

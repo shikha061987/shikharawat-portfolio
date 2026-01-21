@@ -1,0 +1,19 @@
+/* Fix Swiper container layout */
+swiper-container.certificateSwiper {
+  width: 100%;
+  display: block;
+  height: auto !important;
+  padding-bottom: 40px;
+}
+
+/* Center slide content */
+swiper-slide {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+/* Fix weird stretching issues */
+.certificateSwiper swiper-slide > div {
+  width: 100%;
+  max-width: 350px;
+}

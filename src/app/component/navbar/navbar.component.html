@@ -1,0 +1,89 @@
+<!-- <nav class="w-full fixed top-0 z-50 bg-white/80 dark:bg-purple-900 backdrop-blur-xl shadow-sm transition-colors duration-300 min-h-[80px]"> -->
+
+<nav class="w-full fixed top-0 z-50 bg-white/80 dark:bg-purple-900 backdrop-blur-xl 
+            shadow-sm transition-colors duration-300 h-20">
+
+  <!-- <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-20 sm:h-16"> -->
+  <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
+    <!-- Logo -->
+
+    <a href="#home" (click)="setActive('')">
+      <span class="ml-5 text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 
+        bg-clip-text text-transparent animate-bounce-y cursor-pointer inline-block">
+        Portfolio
+      </span>
+    </a>
+
+    <!-- Desktop Menu -->
+    <ul class="navheader hidden lg:flex items-center space-x-10 font-medium">
+
+      <li *ngFor="let link of menuBarItem">
+        <a href="#{{link}}" (click)="setActive(link); closeMenu()" 
+         [ngClass]="{
+             'bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent': activeLink === link,
+             'text-gray-800 dark:text-white': activeLink !== link
+           }" class="relative pb-1 inline-block
+                  after:content-[''] after:absolute after:left-0 after:bottom-0
+                  after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-blue-500 after:to-purple-500
+                  after:transition-all after:duration-300 hover:after:w-full
+                  hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 hover:text-transparent hover:bg-clip-text
+                  transition-all">
+          {{ link | titlecase }}
+        </a>
+      </li>
+    </ul>
+
+    <div class="hidden lg:flex items-center space-x-4">
+
+      <!-- CV Download -->
+      <a href="Shikha_Rawat_Resume.pdf" download target="_blank" rel="noopener noreferrer" class="px-5 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full 
+                font-semibold shadow-md flex items-center gap-2
+                hover:scale-105 hover:shadow-lg transition-all">
+        ⬇ Download CV
+      </a>
+
+      <!-- Dark Mode Button -->
+      <button (click)="toggleDarkMode()" class="p-2 rounded-full border border-gray-300 dark:bg-gray-700 dark:text-white
+                     shadow-md hover:scale-105 hover:shadow-lg transition-all">
+        {{ isDark ? '☀️' : '🌙' }}
+      </button>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button class="lg:hidden text-3xl sm:text-2xl text-black"
+      [ngStyle]="isDark ? {'color': 'white'} : {'color': 'black'}" (click)="toggleMenu()">
+      ☰
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+
+  <div *ngIf="menuOpen" class="menuOpendarkBg navheader lg:hidden bg-slate-100 dark:bg-slate-900 shadow-md px-6 pb-6 animate-fadeIn
+            max-h-[calc(100vh-5rem)] overflow-y-auto">
+
+    <ul class="space-y-4 font-medium">
+      <li *ngFor="let link of menuBarItem">
+        <a (click)="setActive(link)" [ngClass]="{
+           'bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent': activeLink === link
+         }" class="block text-gray-800 dark:text-white p-2 rounded transition-all 
+                hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 
+                hover:bg-clip-text hover:text-transparent">
+          {{ link | titlecase }}
+        </a>
+      </li>
+    </ul>
+
+    <!-- Mobile Buttons -->
+    <div class="mt-4 space-y-3">
+      <a href="Shikha_Rawat_Resume.pdf" download (click)="closeMenu()" class="block w-full text-center px-5 py-2 bg-gradient-to-r from-blue-500 to-purple-500 
+              text-white rounded-full font-semibold shadow-md">
+        ⬇ Download CV
+      </a>
+
+      <button (click)="toggleDarkMode()"
+        class="w-full p-2 text-center rounded-full border border-gray-300 dark:bg-gray-700 dark:text-white">
+        {{ isDark ? 'Light Mode ☀️' : 'Dark Mode 🌙' }}
+      </button>
+    </div>
+  </div>
+</nav>

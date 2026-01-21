@@ -1,0 +1,65 @@
+<section id="home" class="w-full min-h-screen flex flex-col lg:flex-row items-center justify-between 
+         px-3 sm:px-10 lg:px-20 pt-24 pb-16 lg:pt-32 lg:pb-20 relative">
+
+  <!-- LEFT CONTENT -->
+
+  <div data-aos="fade-up" data-aos-duration="800"
+    class="order-2 lg:order-1 py-5 w-full text-text transition-colors flex flex-col justify-center lg:max-w-[55%] ">
+
+    <span class="text-2xl font-semibold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+      Hi, I’m
+    </span>
+
+    <h1 class="mt-6 text-4xl lg:text-5xl lg:text-6xl font-bold flex flex-wrap ">
+      <!-- <span *ngFor="let char of textArray; let i = index" class="letter bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 
+        dark:from-purple-200 dark:via-purple-300 dark:to-blue-200
+        bg-clip-text text-transparent" [style.animationDelay]="getDelay(i)">
+        {{ char }}
+      </span> -->
+      @for (char of textArray; track $index) {
+      <span class="letter bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400
+           dark:from-purple-200 dark:via-purple-300 dark:to-blue-200
+           bg-clip-text text-transparent" [style.animationDelay]="getDelay($index)">
+        {{ char }}
+      </span>
+      }
+
+    </h1>
+
+    <!-- typewriter-job -->
+    <h2 class=" Developerheader mt-4 text-lg sm:text-xl lg:text-2xl font-semibold text-gray-600 dark:text-white">
+      Angular Developer | Front-End Engineer
+    </h2>
+
+    <p class="mt-4 text-lg text-gray-700 leading-relaxed mb-8 lg:mb-10 dark:text-white max-w-xl">
+      I build modern, responsive, and user-friendly web applications using Angular, Firebase, and clean UI frameworks.
+      I’m currently seeking Front-End / Angular Developer opportunities.
+    </p>
+
+    <!-- View / Contact Button -->
+
+    <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-4 w-full sm:w-auto">
+
+      <!-- <a *ngFor="let btnVal of viewBtnVal" [href]="btnVal.href" [class]="btnVal.classes">
+        {{ btnVal.text }}
+      </a> -->
+      @for (btnVal of viewBtnVal; track btnVal.text) {
+      <a [href]="btnVal.href" [class]="btnVal.classes">
+        {{ btnVal.text }}
+      </a>
+      }
+
+    </div>
+  </div>
+
+  <!-- RIGHT IMAGE -->
+
+  <div data-aos="fade-left" data-aos-duration="2000"
+    class="order-1 lg:order-2 mb-10 lg:mb-0 flex justify-center lg:justify-end w-full lg:w-auto">
+
+    <div class="w-64 h-64 lg:w-80 lg:h-80 rounded-full border-[6px] border-purple-400 
+      shadow-[0_10px_30px_rgba(59,130,246,0.4),0_10px_50px_rgba(236,72,153,0.4)]">
+      <img src="profileImg.png" alt="profile" class="w-full h-full object-cover rounded-full" />
+    </div>
+  </div>
+</section>

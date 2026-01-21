@@ -1,0 +1,314 @@
+/* animated-background.component.css */
+/* Gradient Animation */
+.gradient-bg {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(40deg, rgb(54, 41, 94) 0%, rgb(0, 0, 0) 100%);
+}
+
+.gradients-container {
+  filter: url(#goo) blur(40px);
+  width: 100%;
+  height: 100%;
+}
+
+.g1,
+.g2,
+.g3,
+.g4,
+.g5 {
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  mix-blend-mode: soft-light;
+  border-radius: 50%;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.g1 {
+  background: radial-gradient(circle at center, rgba(18, 113, 255, 0.8) 0, rgba(18, 113, 255, 0) 50%) no-repeat;
+  top: 10%;
+  left: 10%;
+  animation-name: move1;
+}
+
+.g2 {
+  background: radial-gradient(circle at center, rgba(221, 74, 255, 0.8) 0, rgba(221, 74, 255, 0) 50%) no-repeat;
+  top: 20%;
+  left: 20%;
+  animation-name: move2;
+}
+
+.g3 {
+  background: radial-gradient(circle at center, rgba(100, 220, 255, 0.8) 0, rgba(100, 220, 255, 0) 50%) no-repeat;
+  top: 30%;
+  left: 30%;
+  animation-name: move3;
+}
+
+.g4 {
+  background: radial-gradient(circle at center, rgba(200, 50, 50, 0.6) 0, rgba(200, 50, 50, 0) 50%) no-repeat;
+  top: 40%;
+  left: 40%;
+  animation-name: move4;
+}
+
+.g5 {
+  background: radial-gradient(circle at center, rgba(180, 180, 50, 0.7) 0, rgba(180, 180, 50, 0) 50%) no-repeat;
+  top: 50%;
+  left: 50%;
+  animation-name: move5;
+}
+
+@keyframes move1 {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  25% {
+    transform: translate(30px, 40px) scale(1.1);
+  }
+
+  50% {
+    transform: translate(10px, 20px) scale(0.9);
+  }
+
+  75% {
+    transform: translate(-20px, 30px) scale(1.05);
+  }
+}
+
+@keyframes move2 {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  25% {
+    transform: translate(-40px, 10px) scale(0.95);
+  }
+
+  50% {
+    transform: translate(20px, -30px) scale(1.1);
+  }
+
+  75% {
+    transform: translate(30px, 20px) scale(0.9);
+  }
+}
+
+@keyframes move3 {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  25% {
+    transform: translate(10px, -20px) scale(1.05);
+  }
+
+  50% {
+    transform: translate(-30px, 10px) scale(0.95);
+  }
+
+  75% {
+    transform: translate(-10px, 30px) scale(1.1);
+  }
+}
+
+@keyframes move4 {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  25% {
+    transform: translate(-20px, -30px) scale(1.1);
+  }
+
+  50% {
+    transform: translate(40px, 10px) scale(0.9);
+  }
+
+  75% {
+    transform: translate(20px, -10px) scale(1.05);
+  }
+}
+
+@keyframes move5 {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  25% {
+    transform: translate(30px, -10px) scale(0.95);
+  }
+
+  50% {
+    transform: translate(-20px, 40px) scale(1.1);
+  }
+
+  75% {
+    transform: translate(-30px, -20px) scale(0.9);
+  }
+}
+
+
+/* Particles Animation - Small Particles and fast animation */
+.particles-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: white;
+  /* Keep white background */
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  animation: float 6s infinite linear;
+  filter: blur(0.5px);
+  transition: transform 0.3s ease;
+}
+
+.particle:hover {
+  transform: scale(1.2);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) translateX(-50px) rotate(0deg) scale(1);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translateY(-100px) translateX(150px) rotate(360deg) scale(0.8);
+    opacity: 0;
+  }
+}
+
+/* Optional: Add a subtle glow effect */
+.particle::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+
+.particle:nth-child(odd) {
+  /* background: rgba(100, 200, 255, 0.4); */
+  background: rgba(153, 0, 204, 1);
+
+
+}
+
+.particle:nth-child(even) {
+  /* background: rgba(255, 100, 255, 0.4); */
+  background: rgba(153, 0, 204, 1);
+
+}
+
+
+/* Grid Animation */
+.grid-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+/* Waves Animation */
+.waves-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  animation: waveAnimation 10s linear infinite;
+}
+
+.wave-1 {
+  animation-delay: 0s;
+  opacity: 0.7;
+  height: 80%;
+}
+
+.wave-2 {
+  animation-delay: -5s;
+  opacity: 0.5;
+  height: 60%;
+}
+
+.wave-3 {
+  animation-delay: -2s;
+  opacity: 0.3;
+  height: 40%;
+}
+
+@keyframes waveAnimation {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-25%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
