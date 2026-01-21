@@ -41,8 +41,9 @@ ng serve
 
 
 ## Screenshots
-![Portfolio Screenshot](projectscreenshot1.png)
-![Portfolio Screenshot](projectscreenshot2.png)
+C:\Users\rawat\Documents\Angular_Nov_2025\2025_NOV_Portfolio\Shikha_Rawat_Portfolio\Shikha_Rawat_Portfolio\public\projectscreenshot1.png
+![Portfolio Screenshot](https://github.com/shikha061987/shikharawat-portfolio/raw/main/public/projectscreenshot1.png)
+![Portfolio Screenshot](https://github.com/shikha061987/shikharawat-portfolio/raw/main/public/projectscreenshot2.png)
 
 ## Contact
 - **Email:** rrawatshikha@example.com
