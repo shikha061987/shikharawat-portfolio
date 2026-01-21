@@ -41,8 +41,8 @@ ng serve
 
 
 ## Screenshots
-![Portfolio Screenshot](screenshot1.png)
-![Portfolio Screenshot](screenshot2.png)
+![Portfolio Screenshot](projectscreenshot1.png)
+![Portfolio Screenshot](projectscreenshot2.png)
 
 ## Contact
 - **Email:** rrawatshikha@example.com

@@ -15,11 +15,10 @@ export class ExperienceComponent {
       toggleDetails(index: number) {
       this.activeSection = this.activeSection === index ? null : index;
     }
-
   experienceList = [
   {
     date: 'August 2024 – Present',
-    title: 'Frontend Angular Developer (Self-Employed)',
+    title: 'Frontend Angular Developer (Independent Projects)',
     location: 'Georgia, USA',
     summary: 'Developing modern, scalable, and high-performance Angular applications with a strong focus on UI/UX, performance optimization, secure authentication, and reusable architecture. Delivering end-to-end solutions from design to deployment using Agile methodologies.',
     keyResponsibilities: [
