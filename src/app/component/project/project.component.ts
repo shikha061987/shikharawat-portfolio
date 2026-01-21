@@ -14,7 +14,7 @@ interface Project {
 
 @Component({
   selector: 'app-project',
-  
+
   templateUrl: './project.component.html',
   styleUrls: ['./project.component.scss'],
   imports: [CommonModule, CertificatesComponent],
@@ -82,13 +82,13 @@ export class ProjectComponent {
         'Firebase deploy',
       ],
       shortfeatures: [
+        'Auth0 implement for authentication.',
         'Browse a catalog of movies with posters, titles, and ratings.',
-        'Filter and sort movies by genre, rating, release date, or popularity.',
       ],
       longfeatures: [
-        'Search movies by title or keyword.',
+        'Browse a catalog of movies with posters, titles, and ratings.',
+        'Filter and sort movies by genre, rating, release date, or popularity.',
         'Clean Angular component structure with routing.',
-        'Auth0 implement for authentication.',
         'Responsive design.',
       ],
     },
@@ -118,12 +118,12 @@ export class ProjectComponent {
       ],
       shortfeatures: [
         'Display all employees with basic details like name, email, phone, address.',
-        'Add, edit, and delete employee records.',
+        'JSON Server for storing and retrieving employee data',
       ],
       longfeatures: [
         'Update existing employee details.',
         'Remove employees when needed.',
-        'JSON Server for storing and retrieving employee data',
+        'Add, edit, and delete employee records.',
         'Clean and responsive UI for an intuitive user experience.',
         'Modular architecture.',
       ],
