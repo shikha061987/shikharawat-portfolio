@@ -224,14 +224,12 @@
 
 
 .particle:nth-child(odd) {
-  /* background: rgba(100, 200, 255, 0.4); */
   background: rgba(153, 0, 204, 1);
 
 
 }
 
 .particle:nth-child(even) {
-  /* background: rgba(255, 100, 255, 0.4); */
   background: rgba(153, 0, 204, 1);
 
 }

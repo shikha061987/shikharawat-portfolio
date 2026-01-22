@@ -64,16 +64,13 @@ html.dark .formplaceholder::placeholder {
 html.dark nav {
 
   background-color: rgb(40, 39, 39);
- // background-image: linear-gradient(to right, #1f1e1e, #282727, #3a3939);
 
 }
 
 html.dark .menuOpendarkBg {
 
   color: white;
-    //background-color: rgb(40, 39, 39);
 background-image: linear-gradient(to right, #1f1e1e, #282727, #3a3939);
-  //  background-image: linear-gradient(to right, #000000, #1f2937, #212326);
   border: none;
 }
 
@@ -237,7 +234,6 @@ html {
     transform: translate(-2px, -2px) scale(1.03);
   }
 }
-  /*End Education div hover on movile*/
 
 
 .hover-effect {
@@ -246,6 +242,5 @@ html {
 
 .hover-effect span {
   opacity: 0.4;
-  /* match the gradient overlay */
 }
 
